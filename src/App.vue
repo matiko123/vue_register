@@ -132,8 +132,7 @@ export default {
     async register() {
       this.loading_spinner = true;
       try {
-        const response = await axios.post(
-          "http://127.0.0.1:8000/api/register",
+        const response = await axiosInstance.post("register",
           {
             name: this.name,
             email: this.email,
